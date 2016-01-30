@@ -3,8 +3,12 @@ using System.Collections;
 
 public class WeaponFire : MonoBehaviour {
 
+	public Rigidbody2D proj;
+	public Transform spawnPosition;
+
 	private bool btnPressed;
 	private bool fired;
+
 
 	// Update is called once per frame
 	void Update () {
@@ -23,6 +27,8 @@ public class WeaponFire : MonoBehaviour {
 	void Fire(){
 		fired = true;
 		Debug.Log ("Instanciate bullet here");
+
+		Rigidbody2D shellInstance = Instantiate (proj, spawnPosition.position, spawnPosition.rotation) as Rigidbody2D;
 
 	}
 }
