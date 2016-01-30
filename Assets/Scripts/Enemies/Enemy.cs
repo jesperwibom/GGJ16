@@ -4,6 +4,7 @@ using System.Collections;
 //movement and life
 
 public class Enemy : MonoBehaviour {
+	private AudioSource entrySound;
 
 	public float speed = 10f;
 	public float life = 150f;
@@ -14,7 +15,12 @@ public class Enemy : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
+
+		Debug.Log (entrySound);
+		StartCoroutine (EntrySound ());
 		Destroy (gameObject, maxLifeTime);
+
+
 	}
 	
 	// Update is called once per frame
@@ -42,5 +48,12 @@ public class Enemy : MonoBehaviour {
 		life -= dmg;
 		Debug.Log ("Dmg taken : " + dmg);
 		//play damage particle/animation
+	}
+	private IEnumerator EntrySound(){
+		if(entrySound != null){
+			Debug.Log ("playing entry sound");
+			yield return new WaitForSeconds (2);
+			gameObject.GetComponent<AudioSource> ().Play ();
+		}
 	}
 }

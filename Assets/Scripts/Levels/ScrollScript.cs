@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ScrollScript : MonoBehaviour {
 	public float speed = 0;
-
+	private  bool running = true;
 	// Use this for initialization
 	void Start () {
 		
@@ -12,10 +12,11 @@ public class ScrollScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		gameObject.GetComponent<Renderer> ().material.mainTextureOffset = new Vector2 (Time.time * speed, 0f);
-
+		if (running) {
+			gameObject.GetComponent<Renderer> ().material.mainTextureOffset = new Vector2 (Time.time * speed, 0f);
+		}
 	}
 	public void stopScroll(){
-		speed = 0;
+		running = false;
 	}
 }
