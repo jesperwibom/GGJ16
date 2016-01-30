@@ -1,32 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WeaponFire : MonoBehaviour {
+public class SimpleEnemyFire : MonoBehaviour {
 
+	public float interval = 2f;
 	public Rigidbody2D proj;
 	public Transform spawnPosition;
 
-	private bool btnPressed;
-	private bool fired;
-
-
+	// Use this for initialization
+	void Start () {
+		StartCoroutine (Fire ());
+	}
+	
 	// Update is called once per frame
 	void Update () {
-		btnPressed = Input.GetButton ("Jump"); //gets the space key
+	
 	}
 
 	void FixedUpdate(){
-		if (!btnPressed) {
-			fired = false;
-		}
-		if (btnPressed && !fired) {
-			Fire ();
-		}
+
 	}
 
-	void Fire(){
-		fired = true;
+	private IEnumerator Fire(){
+		yield return new WaitForSeconds(interval);
 		Rigidbody2D projectileInstance = Instantiate (proj, spawnPosition.position, spawnPosition.rotation) as Rigidbody2D;
-
+		StartCoroutine (Fire ());
 	}
 }

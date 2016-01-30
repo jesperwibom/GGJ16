@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//movement and life
+//use playermanager script to control player life, animation and death grunts
 
-public class Enemy : MonoBehaviour {
+public class SimpleEnemyProjectile : MonoBehaviour {
 
-	public float speed = 10f;
-	public float life = 150f;
+	public float speed = 12f;
+	public LayerMask playerMask;
 
-	private float maxLifeTime = 22000f;
+	private float maxLifeTime = 2f;
 	private Rigidbody2D rb;
 
 	// Use this for initialization
@@ -24,23 +24,10 @@ public class Enemy : MonoBehaviour {
 
 	void FixedUpdate(){
 		Travel ();
-		CheckLife ();
 	}
 
 	void Travel(){
 		Vector2 movement = new Vector2 (-speed * Time.deltaTime, 0);
 		rb.MovePosition(rb.position + movement);
-	}
-
-	void CheckLife(){
-		if (life <= 0) {
-			Destroy (gameObject);
-		}
-	}
-
-	public void TakeDamage(float dmg){
-		life -= dmg;
-		Debug.Log ("Dmg taken : " + dmg);
-		//play damage particle/animation
 	}
 }
