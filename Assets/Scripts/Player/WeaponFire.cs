@@ -5,6 +5,7 @@ public class WeaponFire : MonoBehaviour {
 
 	public Rigidbody2D proj;
 	public Transform spawnPosition;
+	public AudioSource fireSound;
 
 	private bool btnPressed;
 	private bool fired;
@@ -21,6 +22,7 @@ public class WeaponFire : MonoBehaviour {
 		}
 		if (btnPressed && !fired) {
 			Fire ();
+			fireSound.Play ();
 		}
 	}
 

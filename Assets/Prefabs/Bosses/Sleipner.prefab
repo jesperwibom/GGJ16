@@ -129,8 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b876a57b7424ddfbada8eff19964e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  life: 150
+  speed: 0.59
+  life: 1021.8
 --- !u!212 &21242106
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -167,7 +167,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: life
+      value: 1021.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 198790}

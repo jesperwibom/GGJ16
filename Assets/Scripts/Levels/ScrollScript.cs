@@ -15,4 +15,7 @@ public class ScrollScript : MonoBehaviour {
 		gameObject.GetComponent<Renderer> ().material.mainTextureOffset = new Vector2 (Time.time * speed, 0f);
 
 	}
+	public void stopScroll(){
+		speed = 0;
+	}
 }
