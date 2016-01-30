@@ -13,7 +13,7 @@ GameObject:
   - 82: {fileID: 8273132}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,7 +36,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143788}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 829751de7ecb442479435fee7e45c7a0, type: 3}
@@ -110,7 +110,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143788}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f6993ae58b27e45db9cd3ae495d873e5, type: 3}
@@ -193,6 +193,7 @@ MonoBehaviour:
   enemyTypes:
   - {fileID: 111356, guid: 21b422afd9fd84a849ab2fd6d40e4898, type: 2}
   - {fileID: 111356, guid: 21b422afd9fd84a849ab2fd6d40e4898, type: 2}
+  nextScene: sceneTwo
   enemy: {fileID: 5052924, guid: 21b422afd9fd84a849ab2fd6d40e4898, type: 2}
   boss: {fileID: 5034978, guid: 487a3b8b740a645ae986404b4442b2d2, type: 2}
   interval: 2
@@ -211,6 +212,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: enemyTypes.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Spawner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

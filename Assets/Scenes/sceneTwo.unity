@@ -3,7 +3,7 @@
 --- !u!29 &1
 SceneSettings:
   m_ObjectHideFlags: 0
-  m_PVSData:
+  m_PVSData: 
   m_PVSObjectsArray: []
   m_PVSPortalsArray: []
   m_OcclusionBakeSettings:
@@ -130,24 +130,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: background
-      value:
+      value: 
       objectReference: {fileID: 76578418}
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: middleground
-      value:
+      value: 
       objectReference: {fileID: 119346318}
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: forground
-      value:
+      value: 
       objectReference: {fileID: 945534770}
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
-      propertyPath: enemyTypes.Array.data[0]
-      value:
-      objectReference: {fileID: 185740, guid: 5373645f5952641448dbcd2137fa672a, type: 2}
-    - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
-      propertyPath: enemyTypes.Array.data[1]
-      value:
-      objectReference: {fileID: 123188, guid: 9b05aaa4d92e74db9a46785c1c2c6f22, type: 2}
+      propertyPath: nextScene
+      value: sceneTwo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
   m_IsPrefabParent: 0
@@ -474,11 +470,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11490164, guid: 0a595ecc7d4964c3dbd6f5576e53217b, type: 2}
       propertyPath: ui
-      value:
+      value: 
       objectReference: {fileID: 1351558723}
     - target: {fileID: 11490164, guid: 0a595ecc7d4964c3dbd6f5576e53217b, type: 2}
       propertyPath: gm
-      value:
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8288812, guid: 0a595ecc7d4964c3dbd6f5576e53217b, type: 2}
       propertyPath: spreadCustomCurve.m_RotationOrder
