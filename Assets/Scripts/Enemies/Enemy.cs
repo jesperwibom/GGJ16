@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour {
 	public float speed = 10f;
 	public float life = 150f;
 
-	private float maxLifeTime = 22000f;
+	public float maxLifeTime = 30f;
 	private Rigidbody2D rb;
 
 	// Use this for initialization

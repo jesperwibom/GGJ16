@@ -29,12 +29,6 @@ public class SimpleEnemyProjectile : MonoBehaviour {
 				player.Hit ();
 				Destroy (gameObject);
 			}
-			/*
-			DespawnManager despawner = rb.GetComponent<DespawnManager> ();
-			if (player != null) {
-				Debug.Log ("Despawn");
-				Destroy (gameObject);
-			}*/
 		}
 
 	}
@@ -49,7 +43,11 @@ public class SimpleEnemyProjectile : MonoBehaviour {
 	}
 
 	void Travel(){
+		Vector2 newBulletPosition = rb.position + (-(Vector2)transform.right * speed * Time.deltaTime);
+		rb.MovePosition (newBulletPosition);
+		/*
 		Vector2 movement = new Vector2 (-speed * Time.deltaTime, 0);
 		rb.MovePosition(rb.position + movement);
+		*/
 	}
 }
