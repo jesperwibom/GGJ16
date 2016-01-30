@@ -252,7 +252,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &945534770 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 148318, guid: 7a82f7278890948658cdccac6133bad0, type: 2}
@@ -341,7 +341,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!114 &1351558723 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11470814, guid: 2a6b4cd6cf1404251b7bbbfd0de46068,
+  m_PrefabParentObject: {fileID: 11433556, guid: 2a6b4cd6cf1404251b7bbbfd0de46068,
     type: 2}
   m_PrefabInternal: {fileID: 1351558722}
   m_Script: {fileID: 11500000, guid: 3b0fb5ffdc6444e6fa1f9cf3611de873, type: 3}

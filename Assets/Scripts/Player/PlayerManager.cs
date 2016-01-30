@@ -9,7 +9,6 @@ public class PlayerManager : MonoBehaviour {
 	private int score;
 
 	public UIManager ui;
-	public GameManager gm;
 
 	// Use this for initialization
 	void Start () {
@@ -32,8 +31,7 @@ public class PlayerManager : MonoBehaviour {
 			//Time.timeScale = 0.5f;
 			ui.DrawHelmets(0);
 			gameObject.SetActive(false);
-			gm.GameOver ();
-			//display score
+
 		} else {
 			ui.DrawHelmets (lives);
 		}
