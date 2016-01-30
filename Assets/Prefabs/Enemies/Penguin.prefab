@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b876a57b7424ddfbada8eff19964e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 4
   life: 150
   maxLifeTime: 30
 --- !u!114 &11473814
@@ -199,6 +199,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: interval
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 098f9441f8df543cb914c23172c6079d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 0.9
+  interval: 0.8
   proj: {fileID: 5049474, guid: 4a684750cedc1470d9402e42e5f72ad3, type: 2}
   spawnPosition: {fileID: 411944}
 --- !u!114 &11489572
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ef2a75295804bb592917300e053115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aimSpeed: 1
+  aimSpeed: 0.4
   spawnPosition: {fileID: 411944}
   targetPosition: {fileID: 0}
 --- !u!212 &21269470
@@ -206,7 +206,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: aimSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 140628}

@@ -32,7 +32,7 @@ GameObject:
   - 82: {fileID: 8288812}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: 0, z: 2}
+  m_LocalPosition: {x: -7.2160907, y: 0.07121563, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 489834}
@@ -130,8 +130,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 33bea9385115b4e54b117d76fb2a3b11, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -183,7 +183,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   proj: {fileID: 5049474, guid: 3619aa1696cc84477b7fef4fcf5d9d0f, type: 2}
   spawnPosition: {fileID: 403304}
-  fireSound: {fileID: 0}
+  fireSound: {fileID: 8288812}
 --- !u!114 &11424152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -233,6 +233,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
+  ui: {fileID: 0}
+  gm: {fileID: 0}
 --- !u!212 &21208062
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -271,13 +273,8 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
-<<<<<<< HEAD
       propertyPath: m_LocalPosition.z
       value: 2
-=======
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
->>>>>>> 6b83aec355dd9e60dcaed003275a484f55e2a811
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

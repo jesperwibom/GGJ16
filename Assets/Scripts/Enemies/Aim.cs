@@ -5,11 +5,11 @@ public class Aim : MonoBehaviour {
 
 	public float aimSpeed = 0.5f;
 	public Transform spawnPosition;
-	public Transform targetPosition;
+	private Transform targetPosition;
 
 	// Use this for initialization
 	void Start () {
-	
+		targetPosition = GameObject.FindGameObjectWithTag ("Player").transform;
 	}
 
 	// Update is called once per frame
