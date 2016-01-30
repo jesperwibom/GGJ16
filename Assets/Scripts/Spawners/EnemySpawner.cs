@@ -26,7 +26,13 @@ public class EnemySpawner : MonoBehaviour {
 	private ScrollScript forgroundScroller;
 
 	// Use this for initialization
+
+	// Sound related
+
+	public AudioSource themesong;
+	public AudioSource bosssong;
 	void Start () {
+		themesong.Play ();
 		
 		spawnPosition  = gameObject.transform;
 		StartCoroutine (Spawner());
@@ -42,6 +48,7 @@ public class EnemySpawner : MonoBehaviour {
 	void Update () {
 		if (EnemyCounter > enemyTypes.Length) {
 			StopCoroutine (Spawner());
+
 			StartCoroutine (stopScrolls ());
 		}
 
@@ -71,10 +78,13 @@ public class EnemySpawner : MonoBehaviour {
 		if (bossSpawned == false) {
 			StartCoroutine (BossSpawner ());
 
+
 			// SpawnBoss ();
+
 			backgroundScroller.stopScroll ();
 			forgroundScroller.stopScroll ();
 			middlegroundScroller.stopScroll ();
+
 		}
 	}
 	private IEnumerator BossSpawner (){
@@ -86,6 +96,8 @@ public class EnemySpawner : MonoBehaviour {
 		Rigidbody2D bossIns = Instantiate (boss, spawnPosition.position, spawnPosition.rotation) as Rigidbody2D; 
 		StopAllCoroutines ();
 		bossSpawned = true;
+		themesong.Stop();
+		bosssong.Play ();
 
 	}
 }
