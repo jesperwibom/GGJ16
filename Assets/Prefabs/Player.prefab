@@ -183,7 +183,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -208,6 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   proj: {fileID: 5049474, guid: 3619aa1696cc84477b7fef4fcf5d9d0f, type: 2}
   spawnPosition: {fileID: 403304}
+  fireSound: {fileID: 0}
 --- !u!114 &11424152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -270,8 +271,13 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+<<<<<<< HEAD
       propertyPath: m_LocalPosition.z
       value: 2
+=======
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+>>>>>>> 6b83aec355dd9e60dcaed003275a484f55e2a811
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
