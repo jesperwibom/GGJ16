@@ -26,9 +26,8 @@ public class WeaponFire : MonoBehaviour {
 
 	void Fire(){
 		fired = true;
-		Debug.Log ("Instanciate bullet here");
-
-		Rigidbody2D shellInstance = Instantiate (proj, spawnPosition.position, spawnPosition.rotation) as Rigidbody2D;
+		Rigidbody2D projectileInstance = Instantiate (proj, spawnPosition.position, spawnPosition.rotation) as Rigidbody2D;
 
 	}
+
 }

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//movement and life
+
 public class Enemy : MonoBehaviour {
 
 	public float speed = 10f;
@@ -22,10 +24,23 @@ public class Enemy : MonoBehaviour {
 
 	void FixedUpdate(){
 		Travel ();
+		CheckLife ();
 	}
 
 	void Travel(){
 		Vector2 movement = new Vector2 (-speed * Time.deltaTime, 0);
 		rb.MovePosition(rb.position + movement);
+	}
+
+	void CheckLife(){
+		if (life <= 0) {
+			Destroy (gameObject);
+		}
+	}
+
+	public void TakeDamage(float dmg){
+		life -= dmg;
+		Debug.Log ("Dmg taken : " + dmg);
+		//play damage particle/animation
 	}
 }

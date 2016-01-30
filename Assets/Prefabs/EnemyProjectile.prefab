@@ -10,10 +10,10 @@ GameObject:
   - 4: {fileID: 480258}
   - 212: {fileID: 21289214}
   - 50: {fileID: 5049474}
-  - 114: {fileID: 11478202}
   - 58: {fileID: 5894150}
-  m_Layer: 10
-  m_Name: Projectile
+  - 114: {fileID: 11498914}
+  m_Layer: 11
+  m_Name: EnemyProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.715
---- !u!114 &11478202
+--- !u!114 &11498914
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -70,16 +70,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 120992}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fbeba97a4b1340f894df75385a849c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 79cbba57022664deeb6a6d93d367bf6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 100
-  speed: 15
-  enemyMask:
+  speed: 12
+  playerMask:
     serializedVersion: 2
-    m_Bits: 512
-  hitSound: {fileID: 0}
-  explosionParticle: {fileID: 0}
+    m_Bits: 0
 --- !u!212 &21289214
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -106,7 +103,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ddeb7a2dc53164845ac3d2612fafce9a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 98aa0085b8bd94186b842ff0e8dca894, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -119,11 +116,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: enemyMask.m_Bits
-      value: 512
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_IsTrigger
@@ -141,11 +138,6 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ddeb7a2dc53164845ac3d2612fafce9a,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 120992}

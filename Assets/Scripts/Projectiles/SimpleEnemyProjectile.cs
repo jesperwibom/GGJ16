@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerProjectile : MonoBehaviour {
+//use playermanager script to control player life, animation and death grunts
 
-	public float dmg = 100f;
+public class SimpleEnemyProjectile : MonoBehaviour {
+
 	public float speed = 12f;
-	public LayerMask enemyMask;
-	public AudioSource hitSound;
-	public ParticleSystem explosionParticle;
+	public LayerMask playerMask;
 
 	private float maxLifeTime = 2f;
 	private Rigidbody2D rb;
@@ -22,20 +21,27 @@ public class PlayerProjectile : MonoBehaviour {
 		//Debug.Log ("Hit!!!");
 
 		if (col.IsTouching(gameObject.GetComponent<Collider2D>())) {
-			
-			Rigidbody2D targetRigidbody = col.GetComponent<Rigidbody2D> ();
-			Enemy targetHealth = targetRigidbody.GetComponent<Enemy> ();
-			if (targetHealth != null) {
-				targetHealth.TakeDamage (dmg);
+
+			Rigidbody2D rb = col.GetComponent<Rigidbody2D> ();
+
+			PlayerManager player = rb.GetComponent<PlayerManager> ();
+			if (player != null) {
+				player.Hit ();
 				Destroy (gameObject);
 			}
+			/*
+			DespawnManager despawner = rb.GetComponent<DespawnManager> ();
+			if (player != null) {
+				Debug.Log ("Despawn");
+				Destroy (gameObject);
+			}*/
 		}
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+	
 	}
 
 	void FixedUpdate(){
@@ -43,7 +49,7 @@ public class PlayerProjectile : MonoBehaviour {
 	}
 
 	void Travel(){
-		Vector2 movement = new Vector2 (speed * Time.deltaTime, 0);
+		Vector2 movement = new Vector2 (-speed * Time.deltaTime, 0);
 		rb.MovePosition(rb.position + movement);
 	}
 }
