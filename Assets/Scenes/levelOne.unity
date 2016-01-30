@@ -140,6 +140,14 @@ Prefab:
       propertyPath: forground
       value: 
       objectReference: {fileID: 945534770}
+    - target: {fileID: 8273138, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273132, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
   m_IsPrefabParent: 0

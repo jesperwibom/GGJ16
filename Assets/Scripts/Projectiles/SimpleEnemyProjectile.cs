@@ -11,6 +11,9 @@ public class SimpleEnemyProjectile : MonoBehaviour {
 	private float maxLifeTime = 2f;
 	private Rigidbody2D rb;
 
+	public ParticleSystem explosionParticles;
+	public AudioSource explosionAudio;
+
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
@@ -27,7 +30,15 @@ public class SimpleEnemyProjectile : MonoBehaviour {
 			PlayerManager player = rb.GetComponent<PlayerManager> ();
 			if (player != null) {
 				player.Hit ();
-				Destroy (gameObject);
+
+
+				ParticleSystem particles = Instantiate (explosionParticles, transform.position, transform.rotation) as ParticleSystem;
+				particles.Play ();
+				explosionAudio.Play();
+
+
+
+				Destroy (gameObject, 0.4f);
 			}
 		}
 

@@ -7,9 +7,13 @@ public class UIManager : MonoBehaviour {
 	public GameObject life2;
 	public GameObject life3;
 
+	private float alpha = 255f;
+	private Sprite black;
+
 	// Use this for initialization
 	void Start () {
-	
+		black = gameObject.GetComponent<Sprite> ();
+		//StartCoroutine (FadeIn ());
 	}
 	
 	// Update is called once per frame
@@ -31,4 +35,10 @@ public class UIManager : MonoBehaviour {
 			life3.SetActive (true);
 		}
 	}
+	/*
+	IEnumerator FadeIn(){
+		alpha -= 3f;
+		yield return null;
+
+	}*/
 }

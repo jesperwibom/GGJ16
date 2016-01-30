@@ -7,7 +7,7 @@ public class PlayerProjectile : MonoBehaviour {
 	public float speed = 12f;
 	public LayerMask enemyMask;
 	public AudioSource hitSound;
-	public ParticleSystem explosionParticle;
+	public ParticleSystem explosionParticles;
 
 	private float maxLifeTime = 2f;
 	private Rigidbody2D rb;
@@ -27,7 +27,13 @@ public class PlayerProjectile : MonoBehaviour {
 			Enemy targetHealth = targetRigidbody.GetComponent<Enemy> ();
 			if (targetHealth != null) {
 				targetHealth.TakeDamage (dmg);
-				Destroy (gameObject);
+
+				ParticleSystem particles = Instantiate (explosionParticles, transform.position, transform.rotation) as ParticleSystem;
+				particles.Play ();
+
+				hitSound.Play();
+
+				Destroy (gameObject, 0.5f);
 			}
 		}
 
