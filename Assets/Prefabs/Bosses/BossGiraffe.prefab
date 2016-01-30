@@ -142,6 +142,7 @@ MonoBehaviour:
   speed: 0
   life: 2000
   maxLifeTime: 200
+  boss: 1
 --- !u!114 &11428504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -155,7 +156,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aimSpeed: 0.5
   spawnPosition: {fileID: 400694}
-  targetPosition: {fileID: 0}
 --- !u!114 &11451062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -210,6 +210,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.z
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: boss
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
