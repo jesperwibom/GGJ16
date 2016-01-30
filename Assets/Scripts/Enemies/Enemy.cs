@@ -12,9 +12,17 @@ public class Enemy : MonoBehaviour {
 	public float maxLifeTime = 30f;
 	private Rigidbody2D rb;
 
+	// Scene swap related 
+	private GameObject spawner;
+	public bool boss;
+	private EnemySpawner enemySpawner;
+
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
+		spawner = GameObject.FindGameObjectWithTag ("Spawner");
+		enemySpawner = spawner.GetComponent<EnemySpawner> ();
+
 
 		Debug.Log (entrySound);
 		StartCoroutine (EntrySound ());
@@ -40,6 +48,10 @@ public class Enemy : MonoBehaviour {
 
 	void CheckLife(){
 		if (life <= 0) {
+			if (boss) {
+				enemySpawner.swapScene();
+
+			}
 			Destroy (gameObject);
 		}
 	}
@@ -56,4 +68,5 @@ public class Enemy : MonoBehaviour {
 			gameObject.GetComponent<AudioSource> ().Play ();
 		}
 	}
+
 }

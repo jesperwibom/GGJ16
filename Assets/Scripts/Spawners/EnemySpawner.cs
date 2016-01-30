@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEditor.SceneManagement;
 
 public class EnemySpawner : MonoBehaviour {
 	public int NumberOfEnemies;
 	private int EnemyCounter;
 	private bool bossSpawned;
 	public GameObject[] enemyTypes;
+	public string nextScene;
 
 	public Rigidbody2D enemy;
 	public Rigidbody2D boss;
@@ -46,11 +48,16 @@ public class EnemySpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
+
+
 		if (EnemyCounter > enemyTypes.Length) {
 			StopCoroutine (Spawner());
 
 			StartCoroutine (stopScrolls ());
+
 		}
+
 
 	}
 
@@ -99,5 +106,8 @@ public class EnemySpawner : MonoBehaviour {
 		themesong.Stop();
 		bosssong.Play ();
 
+	}
+	public void swapScene(){
+		EditorSceneManager.LoadScene (nextScene);
 	}
 }
