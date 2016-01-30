@@ -29,4 +29,5 @@ public class WeaponFire : MonoBehaviour {
 		Rigidbody2D projectileInstance = Instantiate (proj, spawnPosition.position, spawnPosition.rotation) as Rigidbody2D;
 
 	}
+
 }

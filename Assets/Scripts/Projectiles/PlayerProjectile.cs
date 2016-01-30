@@ -19,7 +19,7 @@ public class PlayerProjectile : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D col){	
-		Debug.Log ("Hit!!!");
+		//Debug.Log ("Hit!!!");
 
 		if (col.IsTouching(gameObject.GetComponent<Collider2D>())) {
 			

@@ -16,6 +16,28 @@ public class SimpleEnemyProjectile : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D> ();
 		Destroy (gameObject, maxLifeTime);
 	}
+
+	void OnTriggerEnter2D (Collider2D col){	
+		//Debug.Log ("Hit!!!");
+
+		if (col.IsTouching(gameObject.GetComponent<Collider2D>())) {
+
+			Rigidbody2D rb = col.GetComponent<Rigidbody2D> ();
+
+			PlayerManager player = rb.GetComponent<PlayerManager> ();
+			if (player != null) {
+				player.Hit ();
+				Destroy (gameObject);
+			}
+			/*
+			DespawnManager despawner = rb.GetComponent<DespawnManager> ();
+			if (player != null) {
+				Debug.Log ("Despawn");
+				Destroy (gameObject);
+			}*/
+		}
+
+	}
 	
 	// Update is called once per frame
 	void Update () {
