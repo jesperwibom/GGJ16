@@ -38,7 +38,7 @@ public class SimpleEnemyProjectile : MonoBehaviour {
 
 
 
-				Destroy (gameObject, 0.4f);
+				Destroy (gameObject, 0.21f);
 			}
 		}
 

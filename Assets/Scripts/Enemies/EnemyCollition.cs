@@ -3,6 +3,8 @@ using System.Collections;
 
 public class EnemyCollition : MonoBehaviour {
 
+	public ParticleSystem explosionParticles;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -23,6 +25,11 @@ public class EnemyCollition : MonoBehaviour {
 			PlayerManager player = rb.GetComponent<PlayerManager> ();
 			if (player != null) {
 				player.Hit ();
+				ParticleSystem particles = Instantiate (explosionParticles, transform.position, transform.rotation) as ParticleSystem;
+				particles.Play ();
+
+
+
 				Destroy (gameObject);
 			}
 

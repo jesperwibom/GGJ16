@@ -16,6 +16,7 @@ GameObject:
   - 114: {fileID: 11451062}
   - 114: {fileID: 11418908}
   - 114: {fileID: 11428504}
+  - 114: {fileID: 11409442}
   m_Layer: 0
   m_Name: BossGiraffe
   m_TagString: Giraffe
@@ -128,6 +129,21 @@ MonoBehaviour:
   moveSpeed: 0.03
   tag: Giraffe
   spinCount: 0
+--- !u!114 &11409442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 647ce8f8cc8b7458fb7f738e773fb829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interval: 1.3
+  proj: {fileID: 5049474, guid: 331aac14c2ff044a2ab7601d971af62c, type: 2}
+  spawnPosition: {fileID: 400694}
+  spread: 25
 --- !u!114 &11418908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 098f9441f8df543cb914c23172c6079d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 0.5
+  interval: 1.2
   proj: {fileID: 5049474, guid: 331aac14c2ff044a2ab7601d971af62c, type: 2}
   spawnPosition: {fileID: 400694}
 --- !u!212 &21216114
@@ -215,6 +231,22 @@ Prefab:
       propertyPath: boss
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: interval
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: spread
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: proj
+      value: 
+      objectReference: {fileID: 5049474, guid: 331aac14c2ff044a2ab7601d971af62c, type: 2}
+    - target: {fileID: 0}
+      propertyPath: spawnPosition
+      value: 
+      objectReference: {fileID: 400694}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 158278}
