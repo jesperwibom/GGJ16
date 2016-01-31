@@ -16,6 +16,7 @@ GameObject:
   - 114: {fileID: 11450034}
   - 114: {fileID: 11491530}
   - 114: {fileID: 11434856}
+  - 82: {fileID: 8222696}
   m_Layer: 0
   m_Name: BossTurtle
   m_TagString: Giraffe
@@ -94,6 +95,80 @@ BoxCollider2D:
   m_Offset: {x: 1.2069027, y: 0.24763016}
   serializedVersion: 2
   m_Size: {x: 3.2662716, y: 2.275402}
+--- !u!82 &8222696
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161600}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 42776cac5d9aa4821b70d9d9b2712901, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!111 &11178568
 Animation:
   m_ObjectHideFlags: 1
@@ -166,6 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b876a57b7424ddfbada8eff19964e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floatStrength: 3
   speed: 0
   life: 1500
   maxLifeTime: 200
@@ -211,6 +287,22 @@ Prefab:
       propertyPath: boss
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 42776cac5d9aa4821b70d9d9b2712901, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 161600}
