@@ -142,7 +142,7 @@ Prefab:
       objectReference: {fileID: 945534770}
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: nextScene
-      value: sceneTwo
+      value: levelThree
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
