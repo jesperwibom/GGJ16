@@ -6,7 +6,7 @@ public class EnemySpawner : MonoBehaviour {
 	
 	private GameObject bossDeathSound;
 
-	public int NumberOfEnemies;
+	public int NumberOfEnemies = 20;
 	private int EnemyCounter;
 	private bool bossSpawned;
 	public GameObject[] enemyTypes;
@@ -57,12 +57,7 @@ public class EnemySpawner : MonoBehaviour {
 		
 
 
-		if (EnemyCounter > enemyTypes.Length) {
-			StopCoroutine (Spawner());
 
-			StartCoroutine (stopScrolls ());
-
-		}
 
 
 	}
@@ -77,12 +72,14 @@ public class EnemySpawner : MonoBehaviour {
 		Rigidbody2D enemyIns = Instantiate (enemy, spawnPos, spawnPosition.rotation) as Rigidbody2D; 
 		Debug.Log ("Spawned " + enemy);
 
-		// fixed pos
-		// Rigidbody2D enemyIns = Instantiate (enemy, spawnPosition.position, spawnPosition.rotation) as Rigidbody2D; 
-		if (bossSpawned == false && EnemyCounter < enemyTypes.Length) {
-			StartCoroutine (Spawner());
-		}
 		EnemyCounter = EnemyCounter + 1;
+		Debug.Log("Nr of enemies:" + EnemyCounter);
+		if (EnemyCounter <= NumberOfEnemies-1) {
+			StartCoroutine (Spawner ());
+		} else {
+			StopAllCoroutines ();
+			StartCoroutine (stopScrolls ());
+		}
 
 	}
 
