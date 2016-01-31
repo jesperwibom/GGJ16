@@ -24,7 +24,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143788}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.37, y: -0.17, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -38,7 +38,8 @@ AudioSource:
   m_GameObject: {fileID: 143788}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24386910, guid: 0d5e05b94d1474a0bbe9666f95649074,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 829751de7ecb442479435fee7e45c7a0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -112,7 +113,8 @@ AudioSource:
   m_GameObject: {fileID: 143788}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24386910, guid: 0d5e05b94d1474a0bbe9666f95649074,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: f6993ae58b27e45db9cd3ae495d873e5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -189,14 +191,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8155149160e054115a63e345b6f96482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumberOfEnemies: 1
+  NumberOfEnemies: 7
   enemyTypes:
+  - {fileID: 185740, guid: 5373645f5952641448dbcd2137fa672a, type: 2}
+  - {fileID: 123188, guid: 9b05aaa4d92e74db9a46785c1c2c6f22, type: 2}
   - {fileID: 111356, guid: 21b422afd9fd84a849ab2fd6d40e4898, type: 2}
-  - {fileID: 111356, guid: 21b422afd9fd84a849ab2fd6d40e4898, type: 2}
-  nextScene: sceneTwo
+  nextScene: endScene
   enemy: {fileID: 5052924, guid: 21b422afd9fd84a849ab2fd6d40e4898, type: 2}
   boss: {fileID: 5034978, guid: 487a3b8b740a645ae986404b4442b2d2, type: 2}
-  interval: 2
+  interval: 3
   background: {fileID: 0}
   middleground: {fileID: 0}
   forground: {fileID: 0}

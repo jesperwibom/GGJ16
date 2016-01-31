@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floatStrength: 3
   speed: 0
-  life: 3500
+  life: 4000
   maxLifeTime: 200
   boss: 1
 --- !u!114 &11426118
@@ -322,7 +322,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: life
-      value: 3500
+      value: 4000
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: boss

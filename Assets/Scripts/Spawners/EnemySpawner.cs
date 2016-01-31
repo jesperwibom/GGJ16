@@ -111,13 +111,14 @@ public class EnemySpawner : MonoBehaviour {
 
 	}
 	public void swapScene(){
+		bosssong.Stop ();
 		bossDeathSound.GetComponent<AudioSource> ().Play ();
 		StartCoroutine (newScene ());
 	}
 
 	private IEnumerator newScene(){
 		Debug.Log ("swap scene coroutine");
-		yield return new WaitForSeconds (3);
+		yield return new WaitForSeconds (4.5f);
 		EditorSceneManager.LoadScene (nextScene);
 }
 }
