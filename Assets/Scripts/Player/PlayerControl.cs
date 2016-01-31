@@ -11,14 +11,21 @@ public class PlayerControl : MonoBehaviour {
 	*/
 
 	private Rigidbody2D rb;
-	private float movementInput;
+	private float movementVerInput;
+	private float movementHorInput;
+
+	public float minX = -7f;
+	public float maxX = 7f;
+	public float minY = -5f;
+	public float maxY = 5f;
 
 	void Awake(){
 		rb = GetComponent<Rigidbody2D> ();
 	}
 
 	void OnEnable(){
-		movementInput = 0f;
+		movementVerInput = 0f;
+		movementHorInput = 0f;
 	}
 
 	void OnDisable(){
@@ -26,7 +33,8 @@ public class PlayerControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		movementInput = Input.GetAxis ("Vertical");
+		movementVerInput = Input.GetAxis ("Vertical");
+		movementHorInput = Input.GetAxis ("Horizontal");
 	}
 
 	void FixedUpdate(){
@@ -34,7 +42,23 @@ public class PlayerControl : MonoBehaviour {
 	}
 
 	void Move(){
-		Vector2 movement = new Vector2 (0,movementInput * moveSpeed * Time.deltaTime);
+		//Debug.Log (rb.position.y);
+		Debug.Log (rb.position.x);
+		if (rb.position.y > maxY && movementVerInput > 0) {
+			movementVerInput = 0;
+		}
+		if (rb.position.y < minY && movementVerInput < 0) {
+			movementVerInput = 0;
+		}
+		if (rb.position.x > maxX && movementHorInput > 0) {
+			movementHorInput = 0;
+		}
+		if (rb.position.x < minX && movementHorInput < 0) {
+			movementHorInput = 0;
+		}
+			
+		Vector2 movement = new Vector2 (movementHorInput * moveSpeed * Time.deltaTime, movementVerInput * moveSpeed * Time.deltaTime);
+
 		rb.MovePosition(rb.position + movement);
 	}
 }

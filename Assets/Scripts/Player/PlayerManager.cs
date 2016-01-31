@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour {
 
 	public int lives = 3;
 	private int score;
+	public bool godMode = false;
 
 	public UIManager ui;
 
@@ -22,14 +23,15 @@ public class PlayerManager : MonoBehaviour {
 	}
 
 	public void Hit(){
-		lives--;
-		Debug.Log (lives);
-		CheckLives ();
+		if (!godMode) {
+			lives--;
+			Debug.Log (lives);
+			CheckLives ();
+		}
 	}
 
 	private void CheckLives(){
 		if (lives <= 0) {
-			//Time.timeScale = 0.5f;
 			ui.DrawHelmets(0);
 			gameObject.SetActive(false);
 			EditorSceneManager.LoadScene ("Deathscreen");
