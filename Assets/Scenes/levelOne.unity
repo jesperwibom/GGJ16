@@ -96,6 +96,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
+      propertyPath: enemyTypes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 476950, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: m_LocalPosition.x
       value: 11.37
@@ -147,7 +151,7 @@ Prefab:
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: enemyTypes.Array.data[1]
       value: 
-      objectReference: {fileID: 123188, guid: 9b05aaa4d92e74db9a46785c1c2c6f22, type: 2}
+      objectReference: {fileID: 134206, guid: 69f37fcd5130844f08bd6da8efc105f1, type: 2}
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: boss
       value: 
@@ -168,12 +172,16 @@ Prefab:
         type: 2}
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: NumberOfEnemies
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: interval
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
+      propertyPath: enemyTypes.Array.data[2]
+      value: 
+      objectReference: {fileID: 123188, guid: 9b05aaa4d92e74db9a46785c1c2c6f22, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
   m_IsPrefabParent: 0

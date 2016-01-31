@@ -126,7 +126,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 476950, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: background
@@ -141,20 +141,16 @@ Prefab:
       value: 
       objectReference: {fileID: 945534770}
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
-      propertyPath: enemyTypes.Array.data[0]
-      value: 
-      objectReference: {fileID: 185740, guid: 5373645f5952641448dbcd2137fa672a, type: 2}
-    - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
-      propertyPath: enemyTypes.Array.data[1]
-      value: 
-      objectReference: {fileID: 123188, guid: 9b05aaa4d92e74db9a46785c1c2c6f22, type: 2}
+      propertyPath: NumberOfEnemies
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: boss
       value: 
-      objectReference: {fileID: 5012874, guid: 00e03cf6b001042c2abcd12289970506, type: 2}
+      objectReference: {fileID: 5095722, guid: 63f78db75962d467cb1136cce684f966, type: 2}
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: nextScene
-      value: levelTwo
+      value: levelFive
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
