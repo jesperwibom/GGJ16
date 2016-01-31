@@ -117,6 +117,7 @@ public class EnemySpawner : MonoBehaviour {
 		bossDeathSound.GetComponent<AudioSource> ().Play ();
 		StartCoroutine (newScene ());
 	}
+
 	private IEnumerator newScene(){
 		Debug.Log ("swap scene coroutine");
 		yield return new WaitForSeconds (3);
