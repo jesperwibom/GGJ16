@@ -3,6 +3,9 @@ using System.Collections;
 using UnityEditor.SceneManagement;
 
 public class EnemySpawner : MonoBehaviour {
+	
+	private GameObject bossDeathSound;
+
 	public int NumberOfEnemies;
 	private int EnemyCounter;
 	private bool bossSpawned;
@@ -34,6 +37,9 @@ public class EnemySpawner : MonoBehaviour {
 	public AudioSource themesong;
 	public AudioSource bosssong;
 	void Start () {
+		bossDeathSound = GameObject.FindGameObjectWithTag ("bossDeathSound");
+		
+
 		themesong.Play ();
 		
 		spawnPosition  = gameObject.transform;
@@ -108,6 +114,12 @@ public class EnemySpawner : MonoBehaviour {
 
 	}
 	public void swapScene(){
-		EditorSceneManager.LoadScene (nextScene);
+		bossDeathSound.GetComponent<AudioSource> ().Play ();
+		StartCoroutine (newScene ());
 	}
+	private IEnumerator newScene(){
+		Debug.Log ("swap scene coroutine");
+		yield return new WaitForSeconds (3);
+		EditorSceneManager.LoadScene (nextScene);
+}
 }

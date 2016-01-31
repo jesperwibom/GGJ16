@@ -152,6 +152,10 @@ Prefab:
       propertyPath: boss
       value: 
       objectReference: {fileID: 5012874, guid: 00e03cf6b001042c2abcd12289970506, type: 2}
+    - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
+      propertyPath: nextScene
+      value: levelTwo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
   m_IsPrefabParent: 0
@@ -159,6 +163,52 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 197266, guid: 7a82f7278890948658cdccac6133bad0, type: 2}
   m_PrefabInternal: {fileID: 1783146775}
+--- !u!1001 &907558732
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 478800, guid: a3aed132ec4294a28a60b755bee5c9dd, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.33150065
+      objectReference: {fileID: 0}
+    - target: {fileID: 478800, guid: a3aed132ec4294a28a60b755bee5c9dd, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.1947489
+      objectReference: {fileID: 0}
+    - target: {fileID: 478800, guid: a3aed132ec4294a28a60b755bee5c9dd, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2.65625
+      objectReference: {fileID: 0}
+    - target: {fileID: 478800, guid: a3aed132ec4294a28a60b755bee5c9dd, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478800, guid: a3aed132ec4294a28a60b755bee5c9dd, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478800, guid: a3aed132ec4294a28a60b755bee5c9dd, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478800, guid: a3aed132ec4294a28a60b755bee5c9dd, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 478800, guid: a3aed132ec4294a28a60b755bee5c9dd, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 184112, guid: a3aed132ec4294a28a60b755bee5c9dd, type: 2}
+      propertyPath: m_TagString
+      value: bossDeathSound
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a3aed132ec4294a28a60b755bee5c9dd, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &945534770 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 148318, guid: 7a82f7278890948658cdccac6133bad0, type: 2}

@@ -4,7 +4,14 @@ using System.Collections;
 //movement and life
 
 public class Enemy : MonoBehaviour {
+
+	// Movement experiment
+	float yPos;
+	public float floatStrength = 3f;
+	int sinSpeed;
+
 	private AudioSource entrySound;
+
 
 	public float speed = 10f;
 	public float life = 150f;
@@ -19,7 +26,12 @@ public class Enemy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
+		// Sin
+		sinSpeed = Random.Range(1, 7); 
+
 		rb = GetComponent<Rigidbody2D> ();
+		yPos = rb.position.y;
 		spawner = GameObject.FindGameObjectWithTag ("Spawner");
 		enemySpawner = spawner.GetComponent<EnemySpawner> ();
 
@@ -33,26 +45,33 @@ public class Enemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (!boss) {
+			transform.position = new Vector2 (transform.position.x,
+				yPos + ((float)Mathf.Sin (-sinSpeed * Time.time) * floatStrength));
+		}
 	}
 
 	void FixedUpdate(){
 		Travel ();
 		CheckLife ();
+
 	}
 
 	void Travel(){
 		Vector2 movement = new Vector2 (-speed * Time.deltaTime, 0);
 		rb.MovePosition(rb.position + movement);
+
+			
+
 	}
 
 	void CheckLife(){
 		if (life <= 0) {
 			if (boss) {
 				enemySpawner.swapScene();
+			} 
+				Destroy (gameObject);
 
-			}
-			Destroy (gameObject);
 		}
 	}
 
