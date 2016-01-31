@@ -142,7 +142,7 @@ Prefab:
       objectReference: {fileID: 945534770}
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: NumberOfEnemies
-      value: 5
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: boss
@@ -152,6 +152,14 @@ Prefab:
       propertyPath: nextScene
       value: levelFour
       objectReference: {fileID: 0}
+    - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
+      propertyPath: interval
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
+      propertyPath: enemyTypes.Array.data[0]
+      value: 
+      objectReference: {fileID: 134206, guid: 69f37fcd5130844f08bd6da8efc105f1, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
   m_IsPrefabParent: 0

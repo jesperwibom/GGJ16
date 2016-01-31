@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+#if UNITY_EDITOR
 using UnityEditor.SceneManagement;
+#endif
 
 public class deathScreen : MonoBehaviour {
 	bool blinking = false;
@@ -18,7 +20,10 @@ public class deathScreen : MonoBehaviour {
 	void Update () {
 		if (Input.anyKeyDown && delayed == true){
 			Debug.Log ("starting!");
+			#if UNITY_EDITOR
 			EditorSceneManager.LoadScene ("StartScene");
+			#endif
+			Application.LoadLevel ("StartScene");
 		}
 		if(blinking == true){
 			text.GetComponent<Renderer> ().enabled = false;

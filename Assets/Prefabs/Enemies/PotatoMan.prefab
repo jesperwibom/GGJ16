@@ -131,8 +131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b876a57b7424ddfbada8eff19964e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floatStrength: 3
   speed: 5
-  life: 450
+  life: 500
   maxLifeTime: 30
   boss: 0
 --- !u!114 &11444738
@@ -210,6 +211,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: life
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

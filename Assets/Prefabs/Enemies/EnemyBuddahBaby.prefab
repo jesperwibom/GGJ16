@@ -157,8 +157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b876a57b7424ddfbada8eff19964e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floatStrength: 3
   speed: 3
-  life: 500
+  life: 100
   maxLifeTime: 30
   boss: 0
 --- !u!212 &21231382
@@ -214,6 +215,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: life
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

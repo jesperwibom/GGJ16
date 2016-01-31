@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+#if UNITY_EDITOR
 using UnityEditor.SceneManagement;
+#endif
 
 public class EndScreen : MonoBehaviour {
 	bool blinking = false;
@@ -14,7 +16,10 @@ public class EndScreen : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.anyKeyDown){
+			#if UNITY_EDITOR
 			EditorSceneManager.LoadScene ("StartScene");
+			#endif
+			Application.LoadLevel ("StartScene");
 		}
 		if(blinking == true){
 			pic.GetComponent<Renderer> ().enabled = false;

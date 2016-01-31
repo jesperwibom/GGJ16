@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+#if UNITY_EDITOR
 using UnityEditor.SceneManagement;
+#endif
 
 public class startScript : MonoBehaviour {
 
@@ -16,7 +18,10 @@ public class startScript : MonoBehaviour {
 	void Update () {
 		if (Input.anyKeyDown){
 			Debug.Log ("starting!");
+			#if UNITY_EDITOR
 			EditorSceneManager.LoadScene ("levelOne");
+			#endif
+			Application.LoadLevel ("levelOne");
 		}
 		if(blinking == false){
 			rend.GetComponent<Renderer> ().enabled = true;

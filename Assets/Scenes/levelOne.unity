@@ -98,7 +98,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: enemyTypes.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 476950, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: m_LocalPosition.x
@@ -151,7 +151,7 @@ Prefab:
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: enemyTypes.Array.data[1]
       value: 
-      objectReference: {fileID: 134206, guid: 69f37fcd5130844f08bd6da8efc105f1, type: 2}
+      objectReference: {fileID: 111356, guid: 21b422afd9fd84a849ab2fd6d40e4898, type: 2}
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: boss
       value: 
@@ -172,11 +172,11 @@ Prefab:
         type: 2}
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: NumberOfEnemies
-      value: 3
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: interval
-      value: 3
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 11473954, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
       propertyPath: enemyTypes.Array.data[2]

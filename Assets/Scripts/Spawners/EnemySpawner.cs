@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+#if UNITY_EDITOR
 using UnityEditor.SceneManagement;
+#endif
 
 public class EnemySpawner : MonoBehaviour {
 	
@@ -119,6 +121,9 @@ public class EnemySpawner : MonoBehaviour {
 	private IEnumerator newScene(){
 		Debug.Log ("swap scene coroutine");
 		yield return new WaitForSeconds (4.5f);
+		#if UNITY_EDITOR
 		EditorSceneManager.LoadScene (nextScene);
+		#endif
+		Application.LoadLevel (nextScene);
 }
 }

@@ -159,7 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floatStrength: 3
   speed: 3
-  life: 900
+  life: 600
   maxLifeTime: 30
   boss: 0
 --- !u!212 &21286042
@@ -215,6 +215,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: life
+      value: 600
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
