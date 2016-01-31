@@ -156,16 +156,6 @@ Prefab:
       propertyPath: nextScene
       value: levelTwo
       objectReference: {fileID: 0}
-    - target: {fileID: 8273138, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24386910, guid: 0d5e05b94d1474a0bbe9666f95649074,
-        type: 2}
-    - target: {fileID: 8273132, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24386910, guid: 0d5e05b94d1474a0bbe9666f95649074,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0c0f4cfe797f483e939d33f6a98e423, type: 2}
   m_IsPrefabParent: 0
@@ -216,11 +206,6 @@ Prefab:
       propertyPath: m_TagString
       value: bossDeathSound
       objectReference: {fileID: 0}
-    - target: {fileID: 8295160, guid: a3aed132ec4294a28a60b755bee5c9dd, type: 2}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24313566, guid: 0d5e05b94d1474a0bbe9666f95649074,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3aed132ec4294a28a60b755bee5c9dd, type: 2}
   m_IsPrefabParent: 0
@@ -451,11 +436,6 @@ Prefab:
       propertyPath: spreadCustomCurve.m_RotationOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8288812, guid: 0a595ecc7d4964c3dbd6f5576e53217b, type: 2}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24371204, guid: 0d5e05b94d1474a0bbe9666f95649074,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a595ecc7d4964c3dbd6f5576e53217b, type: 2}
   m_IsPrefabParent: 0
