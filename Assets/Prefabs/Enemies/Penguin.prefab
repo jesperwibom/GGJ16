@@ -69,7 +69,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127918}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071067}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -82,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111356}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
-  m_LocalPosition: {x: 1.454653, y: 1.8254973, z: 0}
+  m_LocalPosition: {x: 8.948038, y: 0.0025081635, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 427762}
@@ -131,8 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 098f9441f8df543cb914c23172c6079d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 1.5
-  proj: {fileID: 5049474, guid: 57b00cc46e8824a159656914f292f919, type: 2}
+  interval: 3
+  proj: {fileID: 5049474, guid: 4a684750cedc1470d9402e42e5f72ad3, type: 2}
   spawnPosition: {fileID: 442692}
 --- !u!114 &11436980
 MonoBehaviour:
@@ -145,9 +145,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b876a57b7424ddfbada8eff19964e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  life: 150
+  speed: 6
+  life: 180
   maxLifeTime: 30
+  boss: 0
 --- !u!114 &11473814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -159,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6995c557d32f48bc82d3c8d384370df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionParticles: {fileID: 19866884, guid: 6ed9b00aebd0b4fa98a7ca6ad0a9a559, type: 2}
 --- !u!212 &21290090
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -203,6 +205,23 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: speed
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: proj
+      value: 
+      objectReference: {fileID: 5049474, guid: 4a684750cedc1470d9402e42e5f72ad3, type: 2}
+    - target: {fileID: 0}
+      propertyPath: explosionParticles
+      value: 
+      objectReference: {fileID: 19866884, guid: 6ed9b00aebd0b4fa98a7ca6ad0a9a559,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalRotation.w
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

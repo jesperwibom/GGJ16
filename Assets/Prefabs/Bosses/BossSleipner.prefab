@@ -32,6 +32,7 @@ GameObject:
   - 114: {fileID: 11411494}
   - 114: {fileID: 11444782}
   - 82: {fileID: 8289476}
+  - 114: {fileID: 11492082}
   m_Layer: 0
   m_Name: BossSleipner
   m_TagString: Giraffe
@@ -197,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  life: 4000
+  life: 3500
   maxLifeTime: 200
   boss: 1
 --- !u!114 &11426118
@@ -242,9 +243,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 098f9441f8df543cb914c23172c6079d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 0.4
+  interval: 0.8
   proj: {fileID: 5049474, guid: 331aac14c2ff044a2ab7601d971af62c, type: 2}
   spawnPosition: {fileID: 411376}
+--- !u!114 &11492082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 647ce8f8cc8b7458fb7f738e773fb829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interval: 1.4
+  proj: {fileID: 5049474, guid: 331aac14c2ff044a2ab7601d971af62c, type: 2}
+  spawnPosition: {fileID: 480258, guid: 331aac14c2ff044a2ab7601d971af62c, type: 2}
+  spread: 40
 --- !u!212 &21252198
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -304,12 +320,28 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: life
-      value: 4000
+      value: 3500
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: boss
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: interval
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: proj
+      value: 
+      objectReference: {fileID: 5049474, guid: 331aac14c2ff044a2ab7601d971af62c, type: 2}
+    - target: {fileID: 0}
+      propertyPath: spread
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: spawnPosition
+      value: 
+      objectReference: {fileID: 480258, guid: 331aac14c2ff044a2ab7601d971af62c, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 138592}

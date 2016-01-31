@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEditor.SceneManagement;
 
 //ctrl player lifes, player position reset, hit sound and hit particles 
 
@@ -31,6 +32,7 @@ public class PlayerManager : MonoBehaviour {
 			//Time.timeScale = 0.5f;
 			ui.DrawHelmets(0);
 			gameObject.SetActive(false);
+			EditorSceneManager.LoadScene ("Deathscreen");
 
 		} else {
 			ui.DrawHelmets (lives);
